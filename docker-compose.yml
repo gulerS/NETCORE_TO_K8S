@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+    csharp:
+      build:
+        context: .
+      container_name: csharp
+      image: sercanguler/csharp:1.0.0
+      ports:
+        - 5000:5000
+      volumes:
+        - ./src/:/work   # map local "src" folder with container "work" folder
+      # working_dir: /work
+      # entrypoint: /bin/bash
+      # stdin_open: true
+      # tty: true
